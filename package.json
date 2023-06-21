@@ -1,0 +1,26 @@
+{
+  "name": "sobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"call env.bat && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sojs-coder/sobot.git"
+  },
+  "author": "SoJS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sojs-coder/sobot/issues"
+  },
+  "homepage": "https://github.com/sojs-coder/sobot#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "jsdom": "^22.1.0",
+    "meilisearch": "^0.33.0",
+    "readline-sync": "^1.4.10"
+  }
+}
