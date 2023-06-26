@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <link rel = "stylesheet" href = "search.css">
+  </head>
+  <body>
+    <h1>Search Results</h1>
+    <form action="/search" method="get">
+      <label for="searchTerm">Search Term:</label>
+      <input type="text" id="q" name="q" required>
+      <button type="submit">Search</button>
+    </form>
+    {% if results.hits.length > 0 %}
+      <p>Found {{ results.hits.length }} result(s).</p>
+      <p>Processing time: {{ results.processingTimeMs }} ms</p>
+      <ul>
+        {% for hit in results.hits %}
+          <li>
+            <h2><a href="{{ hit.url }}" target="_blank">{{ hit.title }}</a></h2>
+            <p>{{ hit.description }}</p>
+            <p>Keywords: {{ hit.keywords }}</p>
+            <p>Heading: {{ hit.bigH1 }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No results found.</p>
+    {% endif %}
+
+    
+  </body>
+</html>

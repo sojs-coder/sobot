@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"call env.bat && node index.js"
+    "start": "call env.bat && node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,12 @@
   "homepage": "https://github.com/sojs-coder/sobot#readme",
   "dependencies": {
     "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "jsdom": "^22.1.0",
     "meilisearch": "^0.33.0",
-    "readline-sync": "^1.4.10"
+    "nunjucks": "^3.2.4",
+    "readline-sync": "^1.4.10",
+    "socket.io": "^4.7.0"
   }
 }

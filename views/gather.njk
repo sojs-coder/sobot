@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Index a URL</title>
+    <link rel = "stylesheet" href = "gather.css">
+  </head>
+  <body>
+    <h1>Index a URL</h1>
+    <textarea id = "data-stream"></textarea>
+    <label for="url">URL:</label>
+    <input type="text" id="toIndex" name="url" value = "{{ toIndex }}" required>
+    <input type="number" id = "depth" name = "depth" value = "{{ depth }}">
+    <button id = "scan">Start Scan</button>
+    <script>
+        const socket = io();
+        var thisUid = null
+        socket.on("data",(data)=>{
+            document.getElementById("data-stream").innerHTML += data.data;
+             document.getElementById("data-stream").scrollTop =  document.getElementById("data-stream").scrollHeight
+        });
+        document.getElementById("scan").onclick = (e)=>{
+            socket.emit("startScan",{
+                toIndex: document.getElementById("toIndex").value,
+                depth: parseInt(document.getElementById("depth").value)
+            })
+        }
+
+    </script>
+  </body>
+</html>

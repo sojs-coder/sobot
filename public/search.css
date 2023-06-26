@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  a {
+    color: #333;
+  }
+  
+  p {
+    margin: 0;
+    color: #777;
+  }
+  
+  p.keywords {
+    font-weight: bold;
+  }
+  
+  p.heading {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  p.body {
+    color: #333;
+  }
+  
+  p.processing-time {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+  }
+  

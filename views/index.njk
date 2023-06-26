@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SoBot</title>
+    <link rel = "stylesheet" href = "index.css">
+  </head>
+  <body>
+    <h1>URL Indexing and Searching</h1>
+
+    <h2>Index a URL</h2>
+    <form action="/index" method="get">
+      <label for="url">URL:</label>
+      <input type="text" id="url" name="url" required>
+      <button type="submit">Index</button>
+    </form>
+
+    <h2>Search for a URL</h2>
+    <form action="/search" method="get">
+      <label for="searchTerm">Search Term:</label>
+      <input type="text" id="q" name="q" required>
+      <button type="submit">Search</button>
+    </form>
+  </body>
+</html>
